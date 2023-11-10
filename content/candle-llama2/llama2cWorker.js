@@ -1,7 +1,7 @@
 import init, { Model } from "./build/m.js";
 
 async function fetchArrayBuffer(url) {
-  const cacheName = "llama2c-candle-cache";
+  const cacheName = "llama2c-candle-cache2";
   const cache = await caches.open(cacheName);
   const cachedResponse = await cache.match(url);
   if (cachedResponse) {
