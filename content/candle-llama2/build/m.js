@@ -435,7 +435,9 @@ async function __wbg_init(input) {
     if (typeof input === 'undefined') {
         input = new URL('m_bg.wasm', import.meta.url);
     }
+	console.debug("__wbg_init", input);
     const imports = __wbg_get_imports();
+	
 
     if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
         input = fetch(input);

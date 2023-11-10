@@ -35,6 +35,8 @@ class Llama2C {
 
 let controller = null;
 self.addEventListener("message", (event) => {
+  console.debug("addEventListener message", event.data);
+			
   if (event.data.command === "start") {
     controller = new AbortController();
     generate(event.data);
