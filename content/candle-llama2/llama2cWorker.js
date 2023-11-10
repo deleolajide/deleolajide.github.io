@@ -16,6 +16,8 @@ class Llama2C {
   static instance = {};
 
   static async getInstance(weightsURL, modelID, tokenizerURL) {
+	console.debug("getInstance", weightsURL, modelID, tokenizerURL);
+	
     // load individual modelID only once
     if (!this.instance[modelID]) {
       await init();
